@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  frontend:
+    build:
+      context: ./
+      dockerfile: Dockerfile.frontend
+    volumes:
+      - .:/usr/local/sansara
+    tty: true
+    ports:
+      - "3000:3000"
